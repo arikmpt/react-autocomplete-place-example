@@ -18,9 +18,42 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "jsxImportSource": "@emotion/react",
+    "paths": {
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@constants/*": [
+        "src/constants/*"
+      ],
+      "@containers": [
+        "src/containers"
+      ],
+      "@interfaces/*": [
+        "src/types/*"
+      ],
+      "@layouts": [
+        "src/layouts"
+      ],
+      "@pages": [
+        "src/pages"
+      ],
+      "@redux/*": [
+        "src/redux/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ]
+    },
   },
   "include": [
-    "src"
+    "src/react-app-env.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
   ]
 }
